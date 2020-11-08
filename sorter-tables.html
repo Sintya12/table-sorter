@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Table Sorter Sosial Media</title>
+
+    <!-- File Pendukung dataTable Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <!-- File Pendukung dataTable Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.22/datatables.min.css"/>
+
+    <style type="text/css">
+      .container{
+        margin-top: 70px;
+      }
+      h1{
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 40px;
+      }
+      .btn{
+        margin-top: 20px;
+        margin-bottom: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mb-3 mt-3">
+      <h1>Table Sorter Sosial Media</h1>
+      <table class="table table-hover table-bordered mydatatable">
+        <thead>
+          <tr class="mt-5">
+            <th>No</th>
+            <th>Nama Lengkap</th>
+            <th>Nama Depan</th>
+            <th>Nama Belakang</th>
+            <th>Username</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Fero Budiman</td>
+            <td>Fero</td>
+            <td>Budiman</td>
+            <td>@eroo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Deswita Putri Pramesti</td>
+            <td>Deswita Putri</td>
+            <td>Pramesti</td>
+            <td>@wita</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Panji Pragiwaksono</td>
+            <td>Panji</td>
+            <td>Pragiwaksono</td>
+            <td>@Pragiwaksono</td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>Ajeng Sintya Lestari</td>
+            <td>Ajeng Sintya</td>
+            <td>Lestari</td>
+            <td>@sintttya</td>
+          </tr>
+          <tr>
+            <th scope="row">5</th>
+            <td>Dita Anggraini</td>
+            <td>Dita</td>
+            <td>Anggraini</td>
+            <td>@ditaa</td>
+          </tr>
+          <tr>
+            <th scope="row">6</th>
+            <td>Bella Safira</td>
+            <td>Bella</td>
+            <td>Safira</td>
+            <td>@bella</td>
+          </tr>
+          <tr>
+            <th scope="row">7</th>
+            <td>Rio Dewanto</td>
+            <td>Rio</td>
+            <td>Dewanto</td>
+            <td>@rioo</td>
+          </tr>
+          <tr>
+            <th scope="row">8</th>
+            <td>Andri Setiawan</td>
+            <td>Andri</td>
+            <td>Setiawan</td>
+            <td>@andrii</td>
+          </tr>
+          <tr>
+            <th scope="row">9</th>
+            <td>Muhammad Zulfikri</td>
+            <td>Muhammad</td>
+            <td>Zulfikri</td>
+            <td>@zulfi</td>
+          </tr>
+          <tr>
+            <th scope="row">10</th>
+            <td>Cika Jessica</td>
+            <td>Cika</td>
+            <td>Jessica</td>
+            <td>@jessie</td>
+          </tr>
+          <tr>
+            <th scope="row">11</th>
+            <td>Diana Rasyid</td>
+            <td>Diana</td>
+            <td>Rasyid</td>
+            <td>@dianaa</td>
+          </tr>
+          <tr>
+            <th scope="row">12</th>
+            <td>Ricky Setia Budi</td>
+            <td>Ricky Setia</td>
+            <td>Budi</td>
+            <td>@ricky</td>
+          </tr>
+          <tr>
+            <th scope="row">13</th>
+            <td>Fifian Safitri</td>
+            <td>Fifian</td>
+            <td>Safitri</td>
+            <td>@fifian</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Tangkap Elemen dengan menggunakan atribut onlick -->
+      <button class="btn btn-info" onclick="funcKu()" type="button">Simpan</button>
+
+      <!-- Menggunakan Metode reload() dengan menambahkan objek location dan property window-->
+      <button class="btn btn-warning" onclick="window.location.reload();" type="reset">Reset</button>
+    </div>
+
+
+    <!-- File Pendukung Bootstrap -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+
+    <!-- File Pendukung dataTable Bootstrap -->
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.22/datatables.min.js"></script>
+
+
+    <script type="text/javascript">
+        // Ini untuk menginisialisasikan tabel HTML ditangkap berdasarkan classnya
+        $('.mydatatable').dataTable();
+
+        // Menggunakan method print() digunakan untuk mencetak konten yang berada di window (jendela) saat ini.
+        function funcKu(){
+          window.print();
+        }
+    </script>
+  </body>
+</html>
